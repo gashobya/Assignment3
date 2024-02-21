@@ -40,7 +40,7 @@
 
   <div class="container">
 
-    <form id="registration-form">
+    <form id="registration-form" action="/admission" method="post">
       <div class="row names labels">
         <div class="col">
           <p>First Name</p>
@@ -86,7 +86,7 @@
         </div>
 
         <div class="col">
-          <p>Phone Number</p>
+          <p>Document</p>
         </div>
       </div>
 
@@ -95,10 +95,10 @@
 
       <div class="row contact">
         <div class="col">
-          <input required type="email" class="form-control" placeholder="email" aria-label="email">
+          <input required type="email" name="email" class="form-control" placeholder="email" aria-label="email">
         </div>
         <div class="col">
-          <input required type="text" class="form-control" placeholder="phone" aria-label="phone">
+          <input required type="file" accept=".pdf" class="form-control" placeholder="phone" aria-label="phone">
         </div>
       </div>
 
@@ -147,7 +147,7 @@
           <div class="inputContainer" role="button" aria-label="Browse Files
               Drag and drop files here" tabindex="0"><input required multiple="multiple" class="fileupload-input"
               id="input_26" type="file" name="file" aria-labelledby="label_26" aria-hidden="true" tabindex="-1">
-            <!-- <input required multiple="multiple" type="file" name="passport" id="passport" placeholder="Input your Picture"> -->
+            <!-- <input required multiple="multiple" type="file" name="passport" id="passport" accept=".jpg" placeholder="Input your Picture"> -->
           </div>
 
         </div>

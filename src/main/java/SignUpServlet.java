@@ -21,13 +21,12 @@ public class SignUpServlet extends HttpServlet {
             String error = "You must Fill Everything";
         }
         else{
-            HttpSession session =  req.getSession();
 
             if(password.matches(confirmPassword)) {
+                HttpSession session =  req.getSession();
                 session.setAttribute("email", username);
                 session.setAttribute("password", password);
                 resp.sendRedirect("/login");
-
             }
         }
 

@@ -10,7 +10,7 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HttpSession session = req.getSession();
+        HttpSession session = req.getSession(false);
         String email = session.getAttribute("email").toString();
         String password = session.getAttribute("password").toString();
         String loginEmail = req.getParameter("email");
@@ -34,7 +34,7 @@ public class LoginServlet extends HttpServlet {
             }
             else{
                 System.out.println("Okayyy");
-                resp.sendRedirect("/Admission.jsp");
+                resp.sendRedirect("/admission");
             }
         }
 
